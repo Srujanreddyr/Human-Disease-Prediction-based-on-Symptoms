@@ -1,5 +1,5 @@
 Disease Prediction Based on Symptoms using Machine Learning
-Overview
+
 The "Disease Prediction Based on Symptoms" project aims to identify and predict diseases based on the symptoms provided by the user. With the growing number of new diseases and the emergence of dangerous variants in the 21st century, this tool provides early detection to help reduce fatalities by predicting the disease and suggesting timely medical intervention. This system employs Machine Learning algorithms such as Random Forest and Naive Bayes to make accurate predictions by comparing the results from both algorithms and selecting the one with the best accuracy.
 
 The system is developed using Python, leveraging Tkinter for the user interface, providing an interactive experience for the user to input their symptoms and get disease predictions.
