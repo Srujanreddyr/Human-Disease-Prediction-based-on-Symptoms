@@ -1,0 +1,36 @@
+{% extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+
+<br><br><br><br>
+<center style="color: whitesmoke;">        
+<div style="color: brown;">
+        <h1>Naive Beyas</h1>
+        <br>
+        Accuracy = {{a}}
+        <br>
+        Precession = {{b}}
+        <br>
+        Recall = {{c}}
+        <br>
+        F1-score = {{d}}
+        <br>
+</div>
+<br><br><br>
+<div style="color: black;">
+        <h1>RandomForestClassifier</h1>
+        <br>
+        Accuracy = {{e}}
+        <br>
+        Precession = {{f}}
+        <br>
+        Recall = {{g}}
+        <br>
+        F1-score = {{h}}
+</div>
+     
+       
+</center>
+
+
+{%endblock%}

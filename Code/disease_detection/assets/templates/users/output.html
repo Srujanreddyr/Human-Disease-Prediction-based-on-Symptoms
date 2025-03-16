@@ -1,0 +1,33 @@
+{% load static %}
+<center>
+<style>
+    body {
+        background-image: url("{% static 'images/img2.jpg' %}");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        color: whitesmoke;
+
+    }
+    button {
+        background-color: red;
+        color: aqua;
+    }
+  </style>
+<body>
+    
+
+<form action="{% url 'pre' %}">
+    
+    <h1>The attack type is : {{k}}</h1>
+
+    <h1>0 ==> Hacking</h1>
+    <h1>1 ==> Phishing</h1>
+    <h1>2 ==> Physical Theft</h1>
+    <h1>3 ==> Weak Security</h1>
+    {% csrf_token %}
+    <button><h1>Go to predection form</h1></button>
+</form>
+</body>
+</center>

@@ -1,0 +1,105 @@
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 70%;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: rgb(65, 165, 252);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Submit Data</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+
+        <label for="id_gender">Gender:</label>
+        <select name="gender" id="id_gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            
+        </select>
+
+        <!-- <label for="gender">Gender:</label>
+        <input type="text" name="gender" id="gender" required> -->
+
+        <label for="id_employment_level">Employment Level:</label>
+        <input type="text" name="employment_level" id="id_employment_level" required>
+
+        <label for="id_job_title">Job Title:</label>
+        <input type="text" name="job_title" id="id_job_title" required>
+
+        <label for="id_incident_type">Incident Type:</label>
+        <input type="text" name="incident_type" id="id_incident_type" required>
+        
+        <!-- <label for="id_password_protected">id_password_protected:</label>
+        <input type="text" name="id_password_protected" id="id_password_protected" required> -->
+
+        <label for="id_password_protected">password_protected:</label>
+        <select name="password_protected" id="id_password_protected" required>
+            <option value="TRUE">TRUE</option>
+            <option value="FALSE">FALSE</option>
+            
+        </select>
+
+        
+        <!-- <label for="id_two_factor_authentication">id_two_factor_authentication:</label>
+        <input type="text" name="id_two_factor_authentication" id="id_two_factor_authentication" required> -->
+
+        <label for="id_two_factor_authentication">two_factor_authentication:</label>
+        <select name="id_two_factor_authentication" id="id_two_factor_authentication" required>
+            <option value="TRUE">TRUE</option>
+            <option value="FALSE">FALSE</option>
+            
+        </select>
+
+        <!-- <label for="id_password_protected">Password Protected:</label>
+        <input type="checkbox" name="password_protected" id="id_password_protected">
+
+        <label for="id_two_factor_authentication">Two Factor Authentication:</label>
+        <input type="checkbox" name="two_factor_authentication" id="id_two_factor_authentication"> -->
+
+        <button type="submit">Predict</button>
+
+       
+    </form>
+    <form action="{% url 'userhome' %}">
+        {% csrf_token %}
+        <button>Go to user home page</button>
+    </form>
+</body>
+</html>
+
+
+{% endblock %}
